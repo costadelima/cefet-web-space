@@ -3,14 +3,29 @@
     <head>
         <meta charset="UTF-8">
         <title>teste</title>
+        <style>
+            .teste_div{
+              width: 200px;
+              height: 200px;
+              background: red;
+            }
+            #test{
+              width: 200px;
+              height: 200px;
+              background: red;
+            }
+        </style>
     </head>
     <body>
         <h1 id="demo">Clique aqui</h1>
-        <div id="test"></div>
+        <!-- <div id="test"></div> -->
+        <!-- <p class="exemplo"></p>
         <p class="exemplo"></p>
-        <p class="exemplo"></p>
-        <p class="exemplo"></p>
+        <p class="exemplo"></p> -->
+        hauhauhauah
+        <div class="teste_div"></div>
         <script>
+
           // document.getElementById('demo').innerHTML = 'texto do meu paragrafo';
           // console.log(document.getElementsByTagName('p'));
           // let x = document.getElementsByClassName('exemplo');
@@ -30,9 +45,37 @@
           // alert('mensagenzinha feia');
           // window.confirm('pede confirmação');
           // prompt('escreva seu nome:');
-          console.log(document.querySelectorAll('exemplo'));
+          let variavel = document.getElementsByClassName('teste_div');
+
+          for(let x of variavel){
+            x.addEventListener('click', myClick);
+          }
+          // console.log(x[3]);
+          // x[0].addEventListener('click', myClick);
+
+          function myClick(event){
+            console.log(event.currentTarget);
+            let ativa = event.currentTarget;
+            // console.log(ativa);
+            ativa.classList.toggle('teste_div');
+            // console.log(ativa);
+          }
+
+
 
 
         </script>
+        <style>
+            .teste_div{
+              width: 200px;
+              height: 200px;
+              background: red;
+            }
+            #test{
+              width: 200px;
+              height: 200px;
+              background: red;
+            }
+        </style>
     </body>
 </html>
