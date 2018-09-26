@@ -8,12 +8,13 @@
               width: 200px;
               height: 200px;
               background: red;
+              border: 1px solid green;
             }
-            #test{
+            /* #test{
               width: 200px;
               height: 200px;
               background: red;
-            }
+            } */
         </style>
     </head>
     <body>
@@ -24,6 +25,8 @@
         <p class="exemplo"></p> -->
         hauhauhauah
         <div class="teste_div"></div>
+
+
         <script>
 
           // document.getElementById('demo').innerHTML = 'texto do meu paragrafo';
@@ -36,46 +39,35 @@
           //   document.getElementById('demo').innerHTML = 'Obrigado!';
           // }
           // document.getElementById('demo').onclick = funcao;
-
-          let cores = ['azul', 'rosa', 'branco'];
-          let objeto = {nome:'luiz', idade:27}
+          // let cores = ['azul', 'rosa', 'branco'];
+          // let objeto = {nome:'luiz', idade:27}
           // for (let cor of cores){
           //   console.log(cor);
           // }
           // alert('mensagenzinha feia');
           // window.confirm('pede confirmação');
           // prompt('escreva seu nome:');
-          let variavel = document.getElementsByClassName('teste_div');
-
+          /* nao funciona, pq????
+          let pai = document.querySelectorAll('head');
+          console.log(pai);
+          let dado = document.createElement('div');
+          pai.appendChild(dado);
+          console.log(dado);
+          */
+          let variavel = document.getElementsByClassName('body');
+          console.log(variavel);
           for(let x of variavel){
             x.addEventListener('click', myClick);
           }
-          // console.log(x[3]);
-          // x[0].addEventListener('click', myClick);
 
           function myClick(event){
             console.log(event.currentTarget);
             let ativa = event.currentTarget;
             // console.log(ativa);
             ativa.classList.toggle('teste_div');
+            // ativa.classList.toggle('teste_div');
             // console.log(ativa);
           }
-
-
-
-
         </script>
-        <style>
-            .teste_div{
-              width: 200px;
-              height: 200px;
-              background: red;
-            }
-            #test{
-              width: 200px;
-              height: 200px;
-              background: red;
-            }
-        </style>
     </body>
 </html>
