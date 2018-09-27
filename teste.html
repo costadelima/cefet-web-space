@@ -18,16 +18,23 @@
         </style>
     </head>
     <body>
-        <h1 id="demo">Clique aqui</h1>
-        <!-- <div id="test"></div> -->
-        <!-- <p class="exemplo"></p>
-        <p class="exemplo"></p>
-        <p class="exemplo"></p> -->
-        hauhauhauah
-        <div class="teste_div"></div>
+        <h1 id="demo" class="teste_div">Clique aqui</h1>
+
+        <!-- <div class="teste_div"></div> -->
 
 
         <script>
+        let i = 1;
+          let variavel = document.querySelector('#demo');
+          console.log(variavel);
+          variavel.addEventListener('click', myClick);
+          function myClick(event){
+            variavel.classList.toggle('teste_div');
+            // variavel.innerHTML = 'Obrigado!';
+            let ativa = event.currentTarget;
+            console.log(ativa);
+          }
+
 
           // document.getElementById('demo').innerHTML = 'texto do meu paragrafo';
           // console.log(document.getElementsByTagName('p'));
@@ -54,20 +61,20 @@
           pai.appendChild(dado);
           console.log(dado);
           */
-          let variavel = document.getElementsByClassName('body');
-          console.log(variavel);
-          for(let x of variavel){
-            x.addEventListener('click', myClick);
-          }
-
-          function myClick(event){
-            console.log(event.currentTarget);
-            let ativa = event.currentTarget;
-            // console.log(ativa);
-            ativa.classList.toggle('teste_div');
+          // let variavel = document.getElementsByClassName('body');
+          // console.log(variavel);
+          // for(let x of variavel){
+          //   x.addEventListener('click', myClick);
+          // }
+          //
+          // function myClick(event){
+          //   console.log(event.currentTarget);
+          //   let ativa = event.currentTarget;
+          //   // console.log(ativa);
+          //   ativa.classList.toggle('teste_div');
             // ativa.classList.toggle('teste_div');
             // console.log(ativa);
-          }
+          // }
         </script>
     </body>
 </html>

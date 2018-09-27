@@ -36,15 +36,26 @@ function myClick(event){
   alert('mensagem aqui');
 }
 ////////////////////////////////////////////////////////////////////////////////
-//Exercício 1.2
+//Exercício 1.2 e 1.3
 ////////////////////////////////////////////////////////////////////////////////
 let botoesExpan = document.querySelectorAll(".botao-expandir-retrair");
+
 
 for (let x of botoesExpan){
   x.addEventListener('click', myClick);
 }
 
 function myClick(event){
-  let pai = event.currentTarget.parentNode;
-  pai.classList.toggle('expandido');
+  console.log(event.currentTarget);
+  let atual = event.currentTarget;
+  let pai = atual.parentNode;
+  console.log(pai);
+  if(pai.classList.toggle('expandido')){
+    atual.innerHTML = '-';
+  }else{
+    atual.innerHTML = '+';
+  }
 }
+////////////////////////////////////////////////////////////////////////////////
+//Exercício 1.3
+////////////////////////////////////////////////////////////////////////////////
